@@ -1,14 +1,14 @@
 import Hamburger from 'hamburger-react';
-import { useState} from 'react';
-// import { gsap } from "gsap";
+import { useState,useEffect,useRef} from 'react';
+import { gsap } from "gsap";
 const Hero = () => {
-    // const box = useRef();
-    // useEffect(() => {
-    //     gsap.to(box.current, {x:40,duration:1.5, ease:"bounce",onComplete:getback});
-    //     function getback(){
-    //         gsap.to(box.current,{x:0,duration:1.5})
-    //     }
-    // })
+    const box = useRef();
+    useEffect(() => {
+        gsap.to(box.current, {x:40,duration:1.5, ease:"bounce",onComplete:getback});
+        function getback(){
+            gsap.to(box.current,{x:0,duration:1.5})
+        }
+    })
     const [isOpen, setOpen] = useState(false);
     const [colorChange,setcolorChange] = useState(false);
     const changeNavBarColor = () =>{
@@ -24,7 +24,7 @@ const Hero = () => {
             <header className={`${colorChange ? 'headerchangeColor' : 'headerdefaultcolor'}`}>
                 <div className="hero-icon">
                     <h1 className = {`${isOpen ? 'show' : 'hide'}`}><a href="#home" >scree.</a></h1>
-                    <div>
+                    <div ref={box}>
                     </div>
                 </div>
                 <ul className="sys-nav">
