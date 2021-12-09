@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.scss'
+import Hero from './Components/Hero';
+import Store from './Components/Store';
+import BusinessPlan from './Components/BusinessPlan';
+import MarketExp from './Components/MarketExp';
+import MobileApp from './Components/MobileApp';
+import Footer from './Components/Footer';
 function App() {
+  // useEffect(() =>{
+  //   AOS.init();
+  //   AOS.refresh();
+  // },[]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hero/>
+      <Store/>
+      <BusinessPlan/>
+      <MarketExp/>
+      <MobileApp/>
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,1361 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+$primary-colors:(
+    "deepest":#0E122F,
+    "deeper":#090C1F,
+    "deep":#4252C7,
+    "light":#919ADE
+);
+$secondary-colors:(
+    "deepest":#FA5020,
+    "deeper":#FC9D82,
+    "deep":#E8D3B7,
+    "light":#FEEBE6
+);
+$text-colors:(
+    "deepest":#121212,
+    "deeper":#525252,
+    "deep":#929292,
+    "light":#D2D2D2,
+);
+
+@mixin flex($justify:space-between){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+.App{
+    background: map-get($primary-colors, "deepest");
+}
+
+.section-width,header{
+    width:65%;
+    margin:0 auto;
+}
+.section-width{
+    color:map-get($text-colors, "light");
+}
+.hero-bg{
+    // background-image: url("/background-img/Background.svg");
+    background-color: #12163b;
+    background-position: center;
+    background-size: cover;
+}
+header{
+    @include flex;
+    padding:1rem 0;
+    .hero-icon{
+        position:relative;
+        height: 2rem;
+        width: 5rem;
+        h1{
+            top:2px;
+            position: absolute;
+            z-index:1;
+            font-size: 1.5rem;
+            left: 10px;
+            a{
+                text-decoration:none;
+                color: map-get($text-colors, "light");
+            }
+        }
+        div{
+            width: 35px;
+            height:35px;
+            position: absolute;
+            top:0;
+            left: 0;
+            border-radius:50%;
+            background:map-get($secondary-colors, "deepest");
+        }
+    }
+
+    ul{
+        @include flex;
+        margin-left:5rem;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration:none;
+                padding:0 0.5rem;
+                font-size: 0.85rem;
+                color: map-get($text-colors, "light");
+            }
+        }
+    }
+    .mobile-nav{
+        display: none;
+    }
+
+    .begin{
+        @include flex;
+        column-gap: 0.5rem;
+        button{
+            border-radius: 20px;
+            border:none;
+            a{
+               text-decoration: none;
+               color:map-get($text-colors, "deepest");
+               display: inline-block;
+               text-transform: uppercase;
+            }
+        }
+        .login{
+            background: #fff;
+            a{
+                padding: 0.5rem 1.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        .get-started{
+            background:map-get($secondary-colors, "deepest");
+            a{
+                padding: 0.5rem;
+                font-size: 0.8rem;
+                color:white;
+            }
+        }
+    }
+    .hamburger-container{
+        display: none;
+    }
+}
+.hero-content{
+    text-align: center;
+    padding:7rem 0 15rem 0;
+    h2{
+        padding: 3rem 0;
+        font-size: 2.8rem;
+    }
+    button{
+        border-radius: 20px;
+        border:none;
+        a{
+            text-decoration:none;
+            text-transform: uppercase;
+            color:#fff;
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            background:map-get($secondary-colors,"deepest");
+            border:1px solid map-get($secondary-colors,"deepest");
+            &:hover{
+                color: map-get($secondary-colors,"deepest");
+                background:map-get($primary-colors,"deepest");;
+                border:1px solid map-get($secondary-colors,"deepest");
+                transition:  color 1000ms;
+                transition:  background 1000ms;
+            }
+        }
+        
+    }
+}
+.store-section{
+    padding:4.5rem 0;
+    h2{
+        text-align:center;
+        font-size: 1.6rem;
+    }
+    .store-advantages{
+        padding:4rem 0;
+        @include flex;
+        .advantage{
+            @include flex(center);
+            flex-basis: 32%;
+            flex-direction: column;
+            row-gap:1.5rem;
+            text-align: center;
+            .first-svg,.second-svg,.third-svg{
+                width:50px;
+            }
+            div{
+                line-height: 1.5;
+                h4{
+                    padding:1rem 0;
+                    font-size: 1.2rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+.plan-section{
+    padding:5rem 0;
+    text-align: center;
+
+    h2{
+        padding:1rem 0;
+    }
+    .billing{
+        @include flex(center);
+        column-gap: 0.8rem;
+        padding:1rem 0;
+        button{
+            border-radius: 20px;
+            padding: 0.4rem 1rem;
+            background-color: map-get($primary-colors, "deepest");
+            text-transform: uppercase;
+        }
+        .monthly{
+            border:2px solid map-get($secondary-colors, "deepest");
+            color:map-get($secondary-colors, "deepest");
+        }
+        .annually{
+            background-color: map-get($secondary-colors, "deepest");
+            border:none;
+        }
+    }
+    .plan-type{
+        padding: 1.3rem 0;
+        display: flex;
+        justify-content: space-between;
+        .plan{
+            border:2px solid map-get($text-colors, "deep");
+            flex-basis: 32%;
+            border-radius: 15px;
+            .plan-header{
+                background: #090C1F;
+                border-radius:15px 15px 0 0;
+                padding:1rem 0;
+                @include flex;
+                flex-direction:column;
+                row-gap: 0.7rem;
+            }
+            .plan-content{
+                padding:0.8rem 0;
+                @include flex;
+                flex-direction:column;
+                row-gap: 0.7rem;
+            }
+        }
+        .one{
+            height: fit-content;
+        }
+    }
+    .y{
+        display: flex;
+    }
+    .x{
+        display: none;
+    }
+}
+.Experience{
+    padding:5rem 0;
+    position: relative;
+    .exp-header{
+        @include flex(flex-start);
+        column-gap: 2rem;
+        text-align: center;
+        h2{
+            font-size:1.5rem;
+            line-height: 1.5;
+        }
+    }
+    .customer-reviews{
+        width: 90%;
+        margin:3rem auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        .review{
+            @include flex;
+            background: map-get($primary-colors, "deeper");
+            padding:2rem 1rem;
+            width: 55%;
+            border-radius: 15px;
+            column-gap: 1rem;
+            .reviewers{
+                @include flex;
+                flex-direction: column;
+                row-gap:1rem;
+                text-align: center;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            .reviewers-text{
+                display: flex;
+                font-size: 0.75rem;
+                line-height: 2;
+                .quote-svg{
+                    width: 40px;
+                    height: 18px;
+                }
+            }
+        }
+        .second-review{
+            align-self: flex-end;
+            .reviewers{
+                order:2;
+            }
+        }
+    }
+    .ending-quote{
+        position: absolute;
+        right:0rem;
+        bottom:3rem;
+    }
+}
+.mobile-app-section{
+    .mobile-app{
+        position:relative;
+        padding:13rem 0;
+        .app-container{
+            width:90%;
+            margin:0 auto;
+            background: map-get($primary-colors, "deeper");
+            padding:2rem 1.8rem;
+            border-radius:15px;
+            .app-text{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                row-gap:2rem;
+                h2{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+                span{
+                    a{
+                        text-decoration:none;
+                        color:map-get($text-colors, "light");
+                        span{
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+                .link-app{
+                    display: none;
+                }
+            }
+        }
+        .app-image{
+            position:absolute;
+            top:0;
+            right: 8rem;
+        }
+    }
+}
+footer{
+    padding:5rem 0;
+    .footer-flex{
+        @include flex;
+        flex-direction: column;
+        row-gap:3rem;
+    }
+    .website-name{
+        height: 3rem;
+        width: 5rem;
+        position:relative;
+
+        h2{
+            top:2px;
+            position: absolute;
+            z-index:1000;
+            font-size: 1.5rem;
+            left: 10px;
+            
+        }
+        div{
+            width: 35px;
+            height:35px;
+            position: absolute;
+            top:0;
+            left: 0;
+            border-radius:50%;
+            background:map-get($secondary-colors, "deepest");
+        }
+    }
+    ul{
+        @include flex;
+        li{
+            list-style-type: none;
+            a{
+                
+                text-decoration: none;
+                padding:0 2rem;
+                color:map-get($text-colors, "light");
+            }
+        }
+    }
+    .hr-line{
+        width:100%;
+        height: 0.1px;
+        border-top:0.5px solid map-get($text-colors, "light");
+    }
+    .last-line{
+        width: 100%;
+        @include flex;
+        .social-media-icon{
+            @include flex;
+            column-gap: 1rem;
+            .media-icons-container{
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                background-color: rgba(#fff, 0.2);
+                opacity:0.5;
+                @include flex(center);
+                .media-icon{
+                    color:white;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1460px){
+    .section-width,header{
+        width:85%;
+        margin:0 auto;
+    }
+    header{
+        .begin{
+            .login{
+                background: #fff;
+                a{
+                    font-size: 0.65rem;
+                }
+            }
+            .get-started{
+                a{
+                    font-size: 0.65rem;
+                }
+            }
+        }
+    }
+    .hero-content{
+        h2{
+            font-size: 2.5rem;
+        }
+        button{
+            a{
+                font-size: 0.65rem;
+            }
+        }
+    }
+    .store-section{
+        h2{
+            font-size: 1.5rem;
+        }
+        .store-advantages{
+            .advantage{
+                row-gap:1.5rem;
+                .third-svg{
+                    height:64px;
+                }
+                div{
+                    h4{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+        }
+    }
+    .plan-section{
+        .billing{
+            button{
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .Experience{
+        .exp-header{
+            h2{
+                font-size:2rem;
+                margin-left: 3rem;
+            }
+        }
+        .customer-reviews{
+            .review{
+                padding:2rem;
+                .reviewers-text{
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+    .mobile-app-section{
+        .mobile-app{
+            padding:10rem 0;
+            .app-container{
+                padding:3rem 2rem;
+                .app-text{
+                    width: 40%;
+                    line-height: 1.5;
+                    h2{
+                        font-size: 1.7rem;
+                    }
+                    span{
+                        a{
+                            span{
+                                margin-left: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .app-image{
+                right: 10rem;
+                height: 40rem;
+            }
+        }
+    }
+    footer{
+        .website-name{
+            h2{
+                font-size: 1.5rem;
+                left: 8px;
+                top:2px;
+            }
+            div{
+                width: 35px;
+                height:35px;
+                position: absolute;
+                top:0;
+                left: 0;
+                border-radius:50%;
+                background:map-get($secondary-colors, "deepest");
+            }
+        }
+        .last-line{
+            .social-media-icon{
+                .media-icons-container{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1280px){
+    header{
+        .begin{
+            .login{
+                a{
+                    font-size: 0.6rem;
+                }
+            }
+            .get-started{
+                a{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+    .hero-content{
+        h2{
+            font-size: 2.2rem;
+            line-height: 1.5;
+        }
+    }
+    .store-section{
+        h2{
+            font-size: 1.2rem;
+        }
+        .store-advantages{
+            .advantage{
+                flex-basis: 31%;
+                row-gap:1.5rem;
+                .third-svg{
+                    height:50px;
+                }
+                div{
+                    h4{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+    .plan-section{
+        h2{
+            font-size: 1.3rem;
+        }
+        .p{
+            padding:0.5rem 0;
+        }
+        .billing{
+            button{
+                font-size: 0.65rem;
+            }
+        }
+        .plan-type{
+            .plan{
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .Experience{
+        .exp-header{
+            h2{
+                font-size:1.6rem;
+                margin-left: 3rem;
+            }
+        }
+        .customer-reviews{
+            .review{
+                padding:2rem;
+                .reviewers{
+                    font-size: 0.75rem;
+                }
+                .reviewers-text{
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+    .mobile-app-section{
+        .mobile-app{
+            padding:12rem 0;
+            .app-container{
+                padding:3rem 2rem;
+                .app-text{
+                    width: 40%;
+                    line-height: 1.5;
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                    span{
+                        a{
+                            font-size:0.9rem;
+                            span{
+                                margin-left: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .app-image{
+                right: 10rem;
+                height: 40rem;
+            }
+        }
+    }
+    footer{
+        .footer-flex{
+            row-gap:1.5rem;
+        }
+        .website-name{
+            h2{
+                font-size: 1.3rem;
+                left: 12px;
+                top:4px;
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 0.85rem;
+                }
+            }
+        }
+        .last-line{
+            .copy-right{
+                font-size: 0.9rem;
+            }
+            .social-media-icon{
+                .media-icons-container{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    header{
+        .hero-icon{
+            h1{
+                font-size: 1.2rem;
+            }
+            div{
+                width: 30px;
+                height:30px;
+                position: absolute;
+                top:0;
+                left: 0;
+                border-radius:50%;
+                background:map-get($secondary-colors, "deepest");
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 0.7rem;
+                }
+            }
+        }
+        .begin{
+            .login{
+                a{
+                    font-size: 0.55rem;
+                }
+            }
+            .get-started{
+                a{
+                    font-size: 0.55rem;
+                }
+            }
+        }
+    }
+    .hero-content{
+        padding:5.5rem 0 15rem 0;
+        h2{
+            font-size: 2.2rem;
+            line-height: 1.3;
+        }
+        button{
+            a{
+                font-size: 0.6rem;
+                padding: 0.7rem 1.2rem;
+            }
+        }
+    }
+    .store-section{
+        h2{
+            font-size: 1.1rem;
+        }
+        .store-advantages{
+            .advantage{
+                flex-basis: 31%;
+                row-gap:1.5rem;
+                .third-svg{
+                    height:49px;
+                }
+                div{
+                    h4{
+                        font-size: 0.95rem;
+                    }
+                    p{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .plan-section{
+        padding:2rem 0;
+        h2{
+            font-size: 1.2rem;
+        }
+        .p{
+            padding:0.5rem 0;
+            font-size: 0.8rem;
+        }
+        .billing{
+            p{
+                font-size: 0.9rem;
+            }
+            button{
+                font-size: 0.60rem;
+            }
+        }
+        .plan-type{
+            .plan{
+                flex-basis: 31.5%;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .Experience{
+        .exp-header{
+            .start-quote{
+               height: 140px;
+            }
+            h2{
+                font-size:1.35rem;
+                margin-left: 3rem;
+            }
+        }
+        .customer-reviews{
+            
+            .review{
+                width: 65%;
+                padding:2rem;
+                .reviewers{
+                    font-size: 0.65rem;
+                }
+                .reviewers-text{
+                    font-size: 0.65rem;
+                }
+            }
+        }
+        .ending-quote{
+            height: 140px;
+        }
+    }
+    .mobile-app-section{
+        .mobile-app{
+            padding:10rem 0;
+            .app-container{
+                padding:3rem 2rem;
+                .app-text{
+                    width: 45%;
+                    line-height: 1.5;
+                    h2{
+                        font-size: 1.3rem;
+                    }
+                    p{
+                        font-size: 0.8rem;
+                        line-height: 1.8;
+                    }
+                    span{
+                        a{
+                            font-size:0.8rem;
+                        }
+                    }
+                }
+            }
+            .app-image{
+                right: 5rem;
+                height: 35rem;
+            }
+        }
+    }
+    footer{
+        .website-name{
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        .last-line{
+            .copy-right{
+                font-size: 0.8rem;
+            }
+            .social-media-icon{
+                .media-icons-container{
+                    width: 25px;
+                    height: 25px;
+                    .media-icon{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    header{
+        .hero-icon{
+            h1{
+                font-size: 1.2rem;
+            }
+        }
+        ul{
+            margin-left:2rem;
+            li{
+                a{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        .begin{
+            .login{
+                a{
+                    padding: 0.4rem 1rem;
+                    font-size: 0.55rem;
+                }
+            }
+            .get-started{
+                a{
+                    padding: 0.4rem 0.5rem;
+                    font-size: 0.55rem;
+                }
+            }
+        }
+    }
+    .hero-content{
+        h2{
+            font-size: 2.1rem;
+            line-height: 1.3;
+        }
+        button{
+            a{
+                font-size: 0.55rem;
+                padding: 0.7rem 1rem;
+            }
+        }
+    }
+    .store-section{
+        h2{
+            font-size: 1.1rem;
+        }
+        .store-advantages{
+            .advantage{
+                flex-basis: 31%;
+                row-gap:1.5rem;
+                .third-svg{
+                    height:50px;
+                }
+                .second-svg{
+                    height: 62px;
+                }
+                div{
+                    h4{
+                        font-size: 0.75rem;
+                    }
+                    p{
+                        font-size: 0.56rem;
+                    }
+                }
+            }
+        }
+    }
+    .plan-section{
+        h2{
+            font-size: 1rem;
+        }
+        .p{
+            padding:0.5rem 0;
+            font-size: 0.7rem;
+        }
+        .billing{
+            p{
+                font-size: 0.8rem;
+            }
+            button{
+                font-size: 0.5rem;
+            }
+        }
+        .plan-type{
+            .plan{
+                flex-basis: 32%;
+                font-size: 0.7rem;
+            }
+        }
+    }
+    .Experience{
+        .exp-header{
+            .start-quote{
+               height: 90px;
+            }
+            h2{
+                font-size:1rem;
+                margin-left: 1rem;
+            }
+        }
+        .customer-reviews{
+            width:90%;
+            .review{
+                width: 65%;
+                padding:1rem;
+                .reviewers{
+                    font-size: 0.65rem;
+                }
+                .reviewers-text{
+                    font-size: 0.55rem;
+                }
+            }
+        }
+        .ending-quote{
+            height: 90px;
+        }
+    }
+    .mobile-app-section{
+        .mobile-app{
+            padding:5rem 0;
+            .app-container{
+                padding:1.5rem;
+                .app-text{
+                    width: 45%;
+                    line-height: 1.5;
+                    h2{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 0.7rem;
+                        line-height: 1.8;
+                    }
+                    span{
+                        a{
+                            font-size:0.7rem;
+                        }
+                    }
+                }
+            }
+            .app-image{
+                right: 3.5rem;
+                height: 25rem;
+            }
+        }
+    }
+    footer{
+        .website-name{
+            h2{
+                font-size: 1.1rem;
+                left: 12px;
+                top:6px;
+            }
+        }
+        ul{
+            li{
+                a{
+                    font-size: 0.65rem;
+                }
+            }
+        }
+        .last-line{
+            .copy-right{
+                font-size: 0.65rem;
+            }
+            .social-media-icon{
+                .media-icons-container{
+                    width: 20px;
+                    height: 20px;
+                    .media-icon{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    .hero-bg{
+        position: relative;
+    }
+    
+    .headerchangeColor{
+        background:#090C1F;
+    }
+
+    header{
+        width: 100%;
+        padding:1rem 1rem;
+        position: fixed;
+        top:0;
+        z-index: 5000;
+        .hero-icon{
+            
+            h1{
+                font-size: 1.2rem;
+            }
+            .show{
+                display: none;
+            }
+        }
+        .sys-nav{
+            display: none;
+            margin:0;
+        }
+        .block{
+            @include flex(center);
+            position: absolute;
+            flex-direction: column;
+            padding: 2rem 0;
+            row-gap:1rem;
+            background: map-get($primary-colors, "deeper");
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            ul{
+                @include flex;
+                flex-direction: column;
+                row-gap:1.3rem;
+                margin-left: 0rem;
+                li{
+                    a{
+                        font-size:0.9rem;
+                    }
+                }
+            }
+            .button{
+                @include flex;
+                flex-direction: column;
+                row-gap:1.3rem;
+                border-radius: 20px;
+                border:none;
+                a{
+                    font-size: 0.9rem;
+                    text-decoration: none;
+                    color:map-get($text-colors, "deepest");
+                    display: inline-block;
+                    text-transform: uppercase;
+                    border-radius: 20px;
+                }
+                .log-in{
+                    border-radius: 20px;
+                    border:none;
+                    background: #fff;
+                    a{
+                        padding: 0.5rem 1.5rem;
+                        font-size: 0.6rem;
+                    }
+                }
+                .getstarted{
+                    border-radius: 20px;
+                    border:none;
+                    background:map-get($secondary-colors, "deepest");
+                    a{
+                        padding: 0.5rem;
+                        font-size: 0.6rem;
+                        color:white;
+                    }
+                }
+            }
+        }
+        .hidden{
+            display: none;
+        }
+
+        .begin{
+            display: none;
+            .login{
+                a{
+                    padding: 0.4rem 1rem;
+                    font-size: 0.55rem;
+                }
+            }
+            .get-started{
+                a{
+                    padding: 0.4rem 0.5rem;
+                    font-size: 0.55rem;
+                }
+            }
+        }
+        .hamburger-container{
+            display: block;
+        }
+    }
+
+    .hero-content{
+        padding:5rem 0 10rem 0;
+        h2{
+            font-size: 2rem;
+            line-height: 1.3;
+            .br-hide{
+                display: none;
+            }
+        }
+        button{
+            a{
+                font-size: 0.55rem;
+                padding: 0.75rem 1.8rem;
+            }
+        }
+    }
+    .store-section{
+        h2{
+            font-size: 1.1rem;
+            line-height:1.5;
+        }
+        .store-advantages{
+            flex-direction:column;
+            row-gap:2rem;
+            .advantage{
+                flex-basis: 31%;
+                row-gap:0rem;
+                .third-svg{
+                    height:50px;
+                }
+                .second-svg{
+                    height: 73px;
+                }
+                div{
+                    h4{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            .third{
+                margin-top:2rem;
+            }
+        }
+    }
+    .plan-section{
+        h2{
+            font-size: 1.2rem;
+        }
+        .p{
+            padding:0.5rem 0;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+        .billing{
+            p{
+                font-size: 0.8rem;
+            }
+            button{
+                font-size: 0.5rem;
+            }
+        }
+        .plan-type{
+            flex-direction:column;
+            row-gap:2.5rem;
+            .plan{
+                flex-basis: 32%;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .Experience{
+        .exp-header{
+            column-gap: 0rem;
+            .start-quote{
+               height: 45px;
+                flex-basis:10%;
+               margin-bottom:4.5rem;
+            }
+            h2{
+                flex-basis: 75%;
+                font-size:1rem;
+            }
+        }
+        .customer-reviews{
+            width:90%;
+            .review{
+                flex-direction: column;
+                background: map-get($primary-colors, "deepest");
+                width: 100%;
+                padding:1rem 0;
+                row-gap:2rem;
+                .reviewers{
+                    font-size: 0.8rem;
+                    order:2;
+                    width:100%;
+                    .review-break{
+                        display: none;
+                    }
+                }
+                .reviewers-text{
+                    position: relative;
+                    .quote-svg{
+                        position: absolute;
+                        left:-1.8rem;
+                        width: 5rem;
+                    }
+                    text-align: center;   
+                    font-size: 0.75rem;
+                    order:1; 
+                    padding:2rem 1rem;
+                    width: 90%;
+                    border-radius: 15px;
+                    column-gap: 1rem;
+                    background: map-get($primary-colors, "deeper");
+                }
+            }
+        }
+        .ending-quote{
+            height: 45px;
+            width:40px;
+        }
+    }
+    .mobile-app-section{
+        .mobile-app{
+            padding:15rem 0;
+            .app-container{
+                padding:1.5rem;
+                position:absolute;
+                left: 0;
+                right: 0;
+                bottom:2rem;
+                z-index: 1000;
+                .app-text{
+                    display: flex;
+                    text-align: center;
+                    width: 100%;
+                    line-height: 1.5;
+                    row-gap:1.5rem;
+                    h2{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 0.7rem;
+                        line-height: 1.8;
+                    }
+                    span{
+                        display: none;
+                    }
+                    .link-app-container{
+                        @include flex(center);
+                        .link-app{
+                            display: block;
+                            border-radius:25px;
+                            border:none;
+                            a{
+                                border-radius:25px;
+                                padding: 0.5rem 1.2rem;
+                                text-decoration:none;
+                                color:white;
+                                display: inline-block;
+                                background: map-get($secondary-colors, "deepest");
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .app-image{
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+    footer{
+        padding: 1rem 0;
+        background: map-get($primary-colors, "deeper");
+        .footer-flex{
+            row-gap:2rem;
+        }
+        .website-name{
+            position: relative;
+        }
+        ul{
+            flex-direction:column;
+            row-gap:1rem;
+            li{
+                a{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        .last-line{
+            flex-direction: column;
+            row-gap:1.5rem;
+            .copy-right{
+                font-size: 0.7rem;
+            }
+            .social-media-icon{
+                .media-icons-container{
+                    width: 25px;
+                    height: 25px;
+                    .media-icon{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
