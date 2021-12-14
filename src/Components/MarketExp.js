@@ -9,7 +9,7 @@ const MarketExp = () =>{
                     <h2>Making Entrepreneurs Happy,<br/> Giving the Best Marketing Experiece</h2>
                 </div>
                 <div className="customer-reviews">
-                    <div className="review first-review" data-aos="fade-right" data-aos-duration="1000">
+                    <div className="review first-review" data-sal="slide-right" data-sal-duration="2000">
                         <div className="reviewers">
                             <img src="./images/unsplash_d1UPkiFd04A.png" alt=""></img>
                             <p>Kristaps Porzingis</p>
@@ -21,7 +21,7 @@ const MarketExp = () =>{
                             <p>Blandit nunc lectus nisl vitae non amet. Amet bibendum ultricies sed cursus quis leo ut tortor. Turpis namaliquam, vulputate id lobortis.</p>
                         </div>
                     </div>
-                    <div className="review second-review" data-aos="fade-left" data-aos-duration="1000">
+                    <div className="review second-review" data-sal="slide-left" data-sal-duration="2000">
                         <div className="reviewers">
                             <img src="./images/unsplash_2EGNqazbAMk.png" alt=""></img>
                             <p>Samuel Osas</p>
@@ -33,7 +33,7 @@ const MarketExp = () =>{
                             <p>Sit libero, purus eu tellus ipsum commodo. Sed integer tempus risus nec convallis eu commodo posuere ipsum. facilisis risus, integer tempor quis fermentum.</p>
                         </div>
                     </div>
-                    <div className="review" data-aos="fade-right" data-aos-duration="1000">
+                    <div className="review" data-sal="slide-right" data-sal-duration="2000">
                         <div className="reviewers">
                             <img src="./images/unsplash_W7b3eDUb_2I.png" alt=""></img>
                             <p>Sarah <br className="review-break"/> Alexis</p>

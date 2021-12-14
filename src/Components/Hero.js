@@ -1,9 +1,16 @@
 import Hamburger from 'hamburger-react';
 import { useState,useEffect,useRef} from 'react';
 import { gsap } from "gsap";
+import sal from 'sal.js';
+import "../../node_modules/sal.js/dist/sal.css";
 const Hero = () => {
     const box = useRef();
     useEffect(() => {
+        sal(
+            {
+                once:false
+            }
+        );
         gsap.to(box.current, {x:40,duration:1.5, ease:"bounce",onComplete:getback});
         function getback(){
             gsap.to(box.current,{x:0,duration:1.5})
@@ -56,7 +63,7 @@ const Hero = () => {
                 </div>
             </header>
             <section className="section-width hero-content">
-                <h2 className='hero-content-text'> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
+                <h2 className='hero-content-text' data-sal="zoom-out" data-sal-duration ="2000"> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
                 <button><a href="#home">create my store</a></button>
             </section>
         </div>

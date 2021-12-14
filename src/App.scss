@@ -236,9 +236,7 @@ header{
             flex-basis: 32%;
             border-radius: 15px;
             &:hover{
-                transform: scale(1.05);
                 border:2px solid green;
-                transition:transform 1000ms;
             }
             .plan-header{
                 background: #090C1F;
