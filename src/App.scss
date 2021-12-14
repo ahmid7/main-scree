@@ -23,6 +23,10 @@ $text-colors:(
     "light":#D2D2D2,
 );
 
+html{
+    scroll-behavior: smooth;
+}
+
 @mixin flex($justify:space-between){
     display: flex;
     justify-content: $justify;
@@ -85,6 +89,11 @@ header{
                 padding:0 0.5rem;
                 font-size: 0.85rem;
                 color: map-get($text-colors, "light");
+
+                &:hover{
+                    color: map-get($secondary-colors, "deepest");
+                    transition: color 1000ms;
+                }
             }
         }
     }
@@ -114,6 +123,10 @@ header{
         }
         .get-started{
             background:map-get($secondary-colors, "deepest");
+            &:hover{
+                background: map-get($primary-colors,"deep");
+                transition: background 800ms;
+            }
             a{
                 padding: 0.5rem;
                 font-size: 0.8rem;
@@ -204,13 +217,14 @@ header{
             background-color: map-get($primary-colors, "deepest");
             text-transform: uppercase;
         }
-        .monthly{
+        .default-color{
             border:2px solid map-get($secondary-colors, "deepest");
             color:map-get($secondary-colors, "deepest");
         }
-        .annually{
+        .color{
             background-color: map-get($secondary-colors, "deepest");
             border:none;
+            color:map-get($text-colors , "deepest");
         }
     }
     .plan-type{
@@ -221,6 +235,11 @@ header{
             border:2px solid map-get($text-colors, "deep");
             flex-basis: 32%;
             border-radius: 15px;
+            &:hover{
+                transform: scale(1.05);
+                border:2px solid green;
+                transition:transform 1000ms;
+            }
             .plan-header{
                 background: #090C1F;
                 border-radius:15px 15px 0 0;
@@ -384,6 +403,11 @@ footer{
                 text-decoration: none;
                 padding:0 2rem;
                 color:map-get($text-colors, "light");
+
+                &:hover{
+                    color: map-get($secondary-colors, "deepest");
+                    transition: color 1000ms;
+                }
             }
         }
     }
@@ -408,6 +432,10 @@ footer{
                 .media-icon{
                     color:white;
                     font-size: 1.1rem;
+                }
+                &:hover{
+                    transform: scale(1.5);
+                    transition: transform 1000ms;
                 }
             }
         }
@@ -1311,6 +1339,11 @@ footer{
                                 display: inline-block;
                                 background: map-get($secondary-colors, "deepest");
                                 font-size: 0.7rem;
+
+                                &:hover{
+                                    background:map-get($primary-colors, "deep");
+                                    transition: background 1000ms;
+                                }
                             }
                         }
                     }

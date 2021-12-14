@@ -1,6 +1,6 @@
 const Store = () =>{
     return(
-        <section className="store-section">
+        <section className="store-section" id="resource">
             <div className =  "section-width">
                 <h2 className="store-header">
                     Get your store up and running in little  or no time

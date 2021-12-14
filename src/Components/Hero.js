@@ -28,11 +28,11 @@ const Hero = () => {
                     </div>
                 </div>
                 <ul className="sys-nav">
-                    <li><a href="#Products" >Products</a></li>
-                    <li><a href="#resources" >Resources</a></li>
+                    <li><a href="#Products">Products</a></li>
+                    <li><a href="#resource">Resources</a></li>
                     <li><a href="#hire" >Hire an Expert</a></li>
                     <li><a href="#pricing" >Pricing</a></li>
-                    <li><a href="#about" >About Us</a></li>
+                    <li><a href="#footer" >About Us</a></li>
                 </ul>
                 <div className ="begin">
                     <button className="login"><a href="#login">Login</a></button>
@@ -41,10 +41,10 @@ const Hero = () => {
                 <div className={`${isOpen ? 'mobile-nav block' : 'mobile-nav hidden'}`}>
                     <ul>
                         <li><a href="#Products" onClick={()=>{setOpen(!isOpen)}}>Products</a></li>
-                        <li><a href="#resources" onClick={()=>{setOpen(!isOpen)}}>Resources</a></li>
+                        <li><a href="#resource" onClick={()=>{setOpen(!isOpen)}}>Resources</a></li>
                         <li><a href="#hire" onClick={()=>{setOpen(!isOpen)}}>Hire an Expert</a></li>
                         <li><a href="#pricing" onClick={()=>{setOpen(!isOpen)}}>Pricing</a></li>
-                        <li><a href="#about" onClick={()=>{setOpen(!isOpen)}}>About Us</a></li>
+                        <li><a href="#footer" onClick={()=>{setOpen(!isOpen)}}>About Us</a></li>
                     </ul>
                     <div className ="button">
                         <button className="log-in"><a href="#login">Login</a></button>
@@ -56,7 +56,7 @@ const Hero = () => {
                 </div>
             </header>
             <section className="section-width hero-content">
-                <h2 data-aos='zoom-in' data-aos-duration="2000"> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
+                <h2 className='hero-content-text'> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
                 <button><a href="#home">create my store</a></button>
             </section>
         </div>

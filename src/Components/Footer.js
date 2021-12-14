@@ -3,8 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect,useRef } from 'react'; 
 
-
-
 const Footer = () =>{
     gsap.registerPlugin(ScrollTrigger);
     const hnameref = useRef();
@@ -29,7 +27,7 @@ const Footer = () =>{
 
     return(
     <footer>
-        <section className="section-width footer-flex">
+        <section className="section-width footer-flex" id="footer">
             <div className="website-name">
                 <h2>scree.</h2>
                 <div ref={hnameref}>
@@ -38,10 +36,10 @@ const Footer = () =>{
             </div>
             <ul>
                 <li><a href="#home">Products</a></li>
-                <li><a href="#home">Resources</a></li>
+                <li><a href="#resource">Resources</a></li>
                 <li><a href="#home">Hire an Expert</a></li>
-                <li><a href="#home">Pricing</a></li>
-                <li><a href="#home">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#footer">About Us</a></li>
             </ul>
             <div className="hr-line">
             </div>

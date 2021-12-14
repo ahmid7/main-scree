@@ -11,15 +11,15 @@ const BusinessPlan = () =>{
     }
     return(
         <section className="plan-section">
-            <div className="section-width">
+            <div className="section-width" id="pricing">
                 <h2>
                 The Perfect Fit for Every business
                 </h2>
                 <p className="p">Choose the plan that fits you best, we’ve got something for everyone</p>
                 <div className="billing">
                     <p>Billing Type:</p>
-                    <button className="monthly" onClick={testing}>Monthly</button>
-                    <button className="annually" onClick={testing}>Annually</button>
+                    <button className={`${plan ? 'color' : 'default-color'}`} onClick={testing}>Monthly</button>
+                    <button className={`${plan ? 'default-color' : 'color'}`}  onClick={testing}>Annually</button>
                 </div>
                 <div className= {`${plan ? 'plan-type x' : 'plan-type y'}`}>
                     <div className="plan one">
