@@ -237,6 +237,7 @@ header{
             border-radius: 15px;
             &:hover{
                 border:2px solid green;
+                transition:border 1000ms;
             }
             .plan-header{
                 background: #090C1F;

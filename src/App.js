@@ -1,5 +1,4 @@
 import './App.scss'
-//import {useEffect} from'react';
 import Hero from './Components/Hero';
 import Store from './Components/Store';
 import BusinessPlan from './Components/BusinessPlan';
