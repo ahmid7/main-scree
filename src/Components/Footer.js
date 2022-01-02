@@ -49,16 +49,16 @@ const Footer = () =>{
                 </div>
                 <div className="social-media-icon">
                     <div className="media-icons-container">
-                        <RiInstagramFill className="media-icon"/>
+                        <a href="#home"><RiInstagramFill className="media-icon"/></a>
                     </div>
                     <div className="media-icons-container">
-                        <RiDribbbleLine className="media-icon"/>
+                        <a href="#home"><RiDribbbleLine className="media-icon"/></a>
                     </div>
                     <div className="media-icons-container">
-                        <RiTwitterFill className="media-icon"/>
+                        <a href="#home"><RiTwitterFill className="media-icon"/></a>
                     </div>
                     <div className="media-icons-container">
-                        <RiYoutubeFill className="media-icon"/>
+                        <a href="#home"><RiYoutubeFill className="media-icon"/></a>
                     </div>
                 </div>
             </div>

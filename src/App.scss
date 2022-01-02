@@ -170,7 +170,7 @@ header{
     }
 }
 .store-section{
-    padding:4.5rem 0;
+    padding:10rem 0;
     h2{
         text-align:center;
         font-size: 1.6rem;
@@ -201,16 +201,16 @@ header{
     }
 }
 .plan-section{
-    padding:5rem 0;
+    padding:4rem 0;
     text-align: center;
 
     h2{
-        padding:1rem 0;
+        padding:2rem 0;
     }
     .billing{
         @include flex(center);
         column-gap: 0.8rem;
-        padding:1rem 0;
+        padding:2rem 0;
         button{
             border-radius: 20px;
             padding: 0.4rem 1rem;
@@ -269,12 +269,15 @@ header{
     padding:5rem 0;
     position: relative;
     .exp-header{
-        @include flex(flex-start);
+        display: flex;
+        align-items: center;
         column-gap: 2rem;
         text-align: center;
         h2{
-            font-size:1.5rem;
+            flex-basis: 80%;
+            font-size:1.7rem;
             line-height: 1.5;
+            justify-items: center;
         }
     }
     .customer-reviews{
@@ -300,7 +303,7 @@ header{
             }
             .reviewers-text{
                 display: flex;
-                font-size: 0.75rem;
+                font-size: 0.9rem;
                 line-height: 2;
                 .quote-svg{
                     width: 40px;
@@ -329,7 +332,7 @@ header{
             width:90%;
             margin:0 auto;
             background: map-get($primary-colors, "deeper");
-            padding:2rem 1.8rem;
+            padding:4rem 1.8rem;
             border-radius:15px;
             .app-text{
                 width: 45%;
@@ -337,7 +340,7 @@ header{
                 flex-direction: column;
                 row-gap:2rem;
                 h2{
-                    font-size: 1.8rem;
+                    font-size: 1.65rem;
                 }
                 p{
                     font-size: 1rem;
@@ -423,17 +426,21 @@ footer{
             column-gap: 1rem;
             .media-icons-container{
                 border-radius: 50%;
-                width: 25px;
-                height: 25px;
+                width: 30px;
+                height: 30px;
                 background-color: rgba(#fff, 0.2);
                 opacity:0.5;
-                @include flex(center);
+                a{
+                    width:100%;
+                    height: 100%;
+                    @include flex(center)
+                }
                 .media-icon{
                     color:white;
                     font-size: 1.1rem;
                 }
                 &:hover{
-                    transform: scale(1.5);
+                    transform: scale(1.3);
                     transition: transform 1000ms;
                 }
             }
@@ -493,6 +500,7 @@ footer{
         }
     }
     .plan-section{
+        padding:2rem 0;
         .billing{
             button{
                 font-size: 0.8rem;
@@ -502,8 +510,8 @@ footer{
     .Experience{
         .exp-header{
             h2{
-                font-size:2rem;
-                margin-left: 3rem;
+                font-size:1.5rem;
+                flex-basis: 75%;
             }
         }
         .customer-reviews{
@@ -524,10 +532,14 @@ footer{
                     width: 40%;
                     line-height: 1.5;
                     h2{
-                        font-size: 1.7rem;
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-size: 0.9rem;
                     }
                     span{
                         a{
+                            font-size: 0.8rem;
                             span{
                                 margin-left: 0.5rem;
                             }
@@ -591,7 +603,7 @@ footer{
     }
     .store-section{
         h2{
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         .store-advantages{
             .advantage{
@@ -620,7 +632,7 @@ footer{
         }
         .billing{
             button{
-                font-size: 0.65rem;
+                font-size: 0.6rem;
             }
         }
         .plan-type{
@@ -632,8 +644,9 @@ footer{
     .Experience{
         .exp-header{
             h2{
-                font-size:1.6rem;
+                font-size:1.5rem;
                 margin-left: 3rem;
+                flex-basis: 65%;
             }
         }
         .customer-reviews{
@@ -657,14 +670,14 @@ footer{
                     width: 40%;
                     line-height: 1.5;
                     h2{
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                     }
                     p{
-                        font-size: 0.9rem;
+                        font-size: 0.8rem;
                     }
                     span{
                         a{
-                            font-size:0.9rem;
+                            font-size:0.8rem;
                             span{
                                 margin-left: 0.5rem;
                             }
@@ -781,7 +794,7 @@ footer{
         }
     }
     .plan-section{
-        padding:2rem 0;
+        padding:0;
         h2{
             font-size: 1.2rem;
         }
@@ -791,7 +804,7 @@ footer{
         }
         .billing{
             p{
-                font-size: 0.9rem;
+                font-size: 0.75rem;
             }
             button{
                 font-size: 0.60rem;
@@ -811,7 +824,7 @@ footer{
             }
             h2{
                 font-size:1.35rem;
-                margin-left: 3rem;
+                flex-basis: 50%;
             }
         }
         .customer-reviews{
@@ -840,15 +853,15 @@ footer{
                     width: 45%;
                     line-height: 1.5;
                     h2{
-                        font-size: 1.3rem;
+                        font-size: 1.1rem;
                     }
                     p{
-                        font-size: 0.8rem;
+                        font-size: 0.75rem;
                         line-height: 1.8;
                     }
                     span{
                         a{
-                            font-size:0.8rem;
+                            font-size:0.75rem;
                         }
                     }
                 }
@@ -931,6 +944,7 @@ footer{
         }
     }
     .store-section{
+        padding: 5rem 0;
         h2{
             font-size: 1.1rem;
         }
@@ -957,15 +971,15 @@ footer{
     }
     .plan-section{
         h2{
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         .p{
             padding:0.5rem 0;
-            font-size: 0.7rem;
+            font-size: 0.8rem;
         }
         .billing{
             p{
-                font-size: 0.8rem;
+                font-size: 0.75rem;
             }
             button{
                 font-size: 0.5rem;
@@ -982,10 +996,11 @@ footer{
         .exp-header{
             .start-quote{
                height: 90px;
+               flex-basis: 30%;
             }
             h2{
                 font-size:1rem;
-                margin-left: 1rem;
+                margin-right: 5rem;
             }
         }
         .customer-reviews{
