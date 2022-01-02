@@ -13,7 +13,6 @@ const MarketExp = () =>{
             {
                 scrollTrigger:{
                     trigger:'.customer-reviews',
-                    markers:'true',
                     toggleActions:"play plause resume reset"
                 },
                 x:0,
@@ -29,7 +28,6 @@ const MarketExp = () =>{
             {
                 scrollTrigger:{
                     trigger:'.second-review',
-                    markers:'true',
                     toggleActions:"play plause resume reset"
                 },
                 x:0,
@@ -45,7 +43,6 @@ const MarketExp = () =>{
             {
                 scrollTrigger:{
                     trigger:'.third-review',
-                    markers:'true',
                     toggleActions:"play plause resume reset"
                 },
                 x:0,
