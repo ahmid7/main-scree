@@ -3,6 +3,10 @@ import { gsap } from "gsap";
 import {useEffect} from 'react';
 
 const MarketExp = () =>{
+<<<<<<< HEAD
+=======
+    gsap.registerPlugin(ScrollTrigger);
+>>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
     useEffect(()=>{
         gsap.fromTo(
             '.first-review',
@@ -11,8 +15,13 @@ const MarketExp = () =>{
             },
             {
                 scrollTrigger:{
+<<<<<<< HEAD
                     toggleActions:"play plause resume reset",
                     trigger:'.customer-reviews',
+=======
+                    trigger:'.customer-reviews',
+                    toggleActions:"play plause resume reset"
+>>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
                 },
                 x:0,
                 duration:2,
@@ -60,21 +69,33 @@ const MarketExp = () =>{
                     <h2>Making Entrepreneurs Happy,<br/> Giving the Best Marketing Experiece</h2>
                 </div>
                 <div className="customer-reviews">
+<<<<<<< HEAD
                     <div className="review first-review" >
+=======
+                    <div className="review first-review">
+>>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
                         <div className="reviewers">
                             <img src="./images/unsplash_d1UPkiFd04A.png" alt=""></img>
                             <p>Kristaps Porzingis</p>
                         </div>
+<<<<<<< HEAD
                         <div className="reviewers-text">
 
 
+=======
+                        <div className="reviewers-text trigger-scroll">
+>>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
                             <svg className="quote-svg" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9298 2.18655C13.5439 3.40131 12.351 4.82863 12.351 6.46855C13.3679 6.59002 14.2088 7.02024 14.8738 7.75922C15.5387 8.4982 15.8712 9.35357 15.8712 10.3254C15.8712 11.3579 15.5485 12.2285 14.9031 12.9371C14.2577 13.6457 13.4461 14 12.4683 14C11.3731 14 10.4246 13.5394 9.62279 12.6182C8.82096 11.697 8.42005 10.5785 8.42005 9.26247C8.42005 5.31451 10.5517 2.22705 14.8151 0L15.9298 2.18655ZM7.50978 2.18655C5.10429 3.40131 3.90156 4.82863 3.90156 6.46855C4.93808 6.59002 5.78878 7.02024 6.45372 7.75922C7.11865 8.4982 7.45111 9.35357 7.45111 10.3254C7.45111 11.3579 7.12354 12.2285 6.46838 12.9371C5.81323 13.6457 4.99675 14 4.0189 14C2.92372 14 1.98012 13.5394 1.18807 12.6182C0.39602 11.697 0 10.5785 0 9.26247C0 5.31451 2.12188 2.22705 6.36571 0L7.50978 2.18655Z" fill="#3D1E2C"/>
                             </svg>
                             <p>Blandit nunc lectus nisl vitae non amet. Amet bibendum ultricies sed cursus quis leo ut tortor. Turpis namaliquam, vulputate id lobortis.</p>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div className="review second-review">
+=======
+                    <div className="review second-review" >
+>>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
                         <div className="reviewers">
                             <img src="./images/unsplash_2EGNqazbAMk.png" alt=""></img>
                             <p>Samuel Osas</p>
@@ -86,7 +107,11 @@ const MarketExp = () =>{
                             <p>Sit libero, purus eu tellus ipsum commodo. Sed integer tempus risus nec convallis eu commodo posuere ipsum. facilisis risus, integer tempor quis fermentum.</p>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div className="review" >
+=======
+                    <div className="review third-review">
+>>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
                         <div className="reviewers">
                             <img src="./images/unsplash_W7b3eDUb_2I.png" alt=""></img>
                             <p>Sarah <br className="review-break"/> Alexis</p>
