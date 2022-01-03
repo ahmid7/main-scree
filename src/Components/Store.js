@@ -16,7 +16,7 @@ const Store = () =>{
                             <p>Create a store in a couple of clicks. Sign up, add your products, customize your store and you're live.</p>
                         </div>
                     </div>
-                    <div className ="advantage" data-aos='zoom-in' data-aos-duration="1500">
+                    <div className ="advantage" data-aos='zoom-in' data-aos-duration="1500" data-aos-delay="50">
                         <svg className="second-svg" viewBox="0 -20 56 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M36 0V4H49.172L32 21.172L23.414 12.586C23.0389 12.2111 22.5303 12.0004 22 12.0004C21.4697 12.0004 20.9611 12.2111 20.586 12.586L0 33.172L2.828 36L22 16.828L30.586 25.414C30.9611 25.7889 31.4697 25.9996 32 25.9996C32.5303 25.9996 33.0389 25.7889 33.414 25.414L52 6.828V20H56V0H36Z" fill="#FA5020"/>
                         </svg>
