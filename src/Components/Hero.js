@@ -1,18 +1,12 @@
 import Hamburger from 'hamburger-react';
 import { useState,useEffect,useRef} from 'react';
 import { gsap } from "gsap";
-<<<<<<< HEAD
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 const Hero = () => {
     const box = useRef();
     useEffect(() => {
         AOS.init();
-=======
-const Hero = () => {
-    const box = useRef();
-    useEffect(() => {
->>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
         gsap.to(box.current, {x:40,duration:1.5, ease:"bounce",onComplete:getback});
         function getback(){
             gsap.to(box.current,{x:0,duration:1.5})
@@ -36,7 +30,7 @@ const Hero = () => {
                     <div ref={box}>
                     </div>
                 </div>
-                <ul className="sys-nav" data-aos="fade-down" data-aos-duration="1500">
+                <ul className="sys-nav" data-aos="fade-down" data-aos-duration="2000">
                     <li><a href="#Products">Products</a></li>
                     <li><a href="#resource">Resources</a></li>
                     <li><a href="#hire" >Hire an Expert</a></li>
@@ -65,11 +59,7 @@ const Hero = () => {
                 </div>
             </header>
             <section className="section-width hero-content">
-<<<<<<< HEAD
-                <h2 className='hero-content-text' data-aos="zoom-in-down" data-aos-duration="2000"> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
-=======
-                <h2 className='hero-content-text'> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
->>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
+                <h2 className='hero-content-text' data-aos="zoom-in-down" data-aos-duration ="2000" data-aos-delay="1000"> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
                 <button><a href="#home">create my store</a></button>
             </section>
         </div>

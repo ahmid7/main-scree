@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import './App.scss';
-=======
-import './App.scss'
->>>>>>> eeb6f60cdd451efe397136416ec6e3bccd8ac886
 import Hero from './Components/Hero';
 import Store from './Components/Store';
 import BusinessPlan from './Components/BusinessPlan';

@@ -12,17 +12,17 @@ const BusinessPlan = () =>{
     return(
         <section className="plan-section">
             <div className="section-width" id="pricing">
-                <h2>
+                <h2 data-aos="zoom-in" data-aos-duration="1500">
                 The Perfect Fit for Every business
                 </h2>
-                <p className="p">Choose the plan that fits you best, we’ve got something for everyone</p>
-                <div className="billing">
+                <p className="p" data-aos="zoom-in" data-aos-duration="1500">Choose the plan that fits you best, we’ve got something for everyone</p>
+                <div className="billing" data-aos="zoom-in" data-aos-duration="1500">
                     <p>Billing Type:</p>
                     <button className={`${plan ? 'color' : 'default-color'}`} onClick={testing}>Monthly</button>
                     <button className={`${plan ? 'default-color' : 'color'}`}  onClick={testing}>Annually</button>
                 </div>
                 <div className= {`${plan ? 'plan-type x' : 'plan-type y'}`}>
-                    <div className="plan one">
+                    <div className="plan one" data-aos="fade-right" data-aos-duration="1500">
                         <div className="plan-header">
                             <p>silver plan</p>
                             <p>FREE</p>
@@ -58,7 +58,7 @@ const BusinessPlan = () =>{
                         </div>
                     </div>
 
-                    <div className="plan">
+                    <div className="plan" data-aos="fade-left" data-aos-duration="1500">
                         <div className="plan-header">
                             <p>Platinum Plan</p>
                             <p>$39.99/Month</p>

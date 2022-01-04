@@ -3,7 +3,7 @@ const MobileApp = () =>{
         <section className="mobile-app-section">
             <div className="section-width mobile-app">
                 <div className ="app-container">
-                    <div className="app-text">
+                    <div className="app-text" data-aos='fade-up' data-aos-duration="1500">
                         <h2>
                             Run Your Store from Anywhere 
                         </h2>
