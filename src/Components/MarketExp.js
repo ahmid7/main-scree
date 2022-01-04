@@ -58,7 +58,7 @@ const MarketExp = () =>{
                     <svg className="start-quote" width="218" height="160" viewBox="0 0 218 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M218 4.73753C185.348 20.7029 169.023 39.4619 169.023 61.0152C182.94 62.6117 194.448 68.266 203.548 77.9783C212.647 87.6906 217.197 98.9327 217.197 111.705C217.197 125.276 212.781 136.717 203.949 146.03C195.117 155.344 184.011 160 170.629 160C155.641 160 142.661 153.947 131.688 141.839C120.715 129.732 115.229 115.031 115.229 97.7354C115.229 45.8479 144.4 5.26985 202.745 -24L218 4.73753ZM102.771 4.73753C69.8523 20.7029 53.393 39.4619 53.393 61.0152C67.5776 62.6117 79.2196 68.266 88.3192 77.9783C97.4188 87.6906 101.969 98.9327 101.969 111.705C101.969 125.276 97.4857 136.717 88.5199 146.03C79.5541 155.344 68.3805 160 54.9988 160C40.0112 160 27.098 153.947 16.2588 141.839C5.41953 129.732 0 115.031 0 97.7354C0 45.8479 29.038 5.26985 87.1148 -24L102.771 4.73753Z" fill="#FA5020"/>
                     </svg>
-                    <h2>Making Entrepreneurs Happy,<br/> Giving the Best Marketing Experiece</h2>
+                    <h2 data-aos="zoom-in-up" data-aos-duration="1500">Making Entrepreneurs Happy,<br/> Giving the Best Marketing Experiece</h2>
                 </div>
                 <div className="customer-reviews">
                     <div className="review first-review">
