@@ -10,7 +10,7 @@ const MobileApp = () =>{
                         <p>
                         Manage your business on the go with the Scree Mobile App. Create products, process orders, and keep an eye on key stats in real-time.
                         </p>
-                        <span className=""><a href="#home">Get The App <span>&#8594;</span></a></span>
+                        <span className="link-to-app"><a href="#home">Get The App <span className="link-arrow">&#8594;</span></a></span>
                         <div className="link-app-container">
                             <button className="link-app"><a href="#home">Get The App <span>&#8594;</span></a></button>
                         </div>

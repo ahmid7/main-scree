@@ -357,7 +357,13 @@ header{
                         color:map-get($text-colors, "light");
                         span{
                             margin-left: 1rem;
+                            transition: margin-left 1000ms;
                         }
+                    }
+                }
+                .link-to-app{
+                    &:hover > a > span{
+                        margin-left: 1rem;
                     }
                 }
                 .link-app{
@@ -935,7 +941,7 @@ footer{
             margin-left:2rem;
             li{
                 a{
-                    font-size: 0.6rem;
+                    font-size: 0.5rem;
                 }
             }
         }
