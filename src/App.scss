@@ -915,6 +915,7 @@ footer{
             }
         }
         ul{
+            margin-left: 2rem;
             li{
                 a{
                     font-size: 0.7rem;
@@ -1505,9 +1506,9 @@ footer{
         .exp-header{
             column-gap: 0rem;
             .start-quote{
-               height: 45px;
+                height: 45px;
                 flex-basis:10%;
-               margin-bottom:4.5rem;
+                margin-bottom:4.5rem;
             }
             h2{
                 flex-basis: 75%;
