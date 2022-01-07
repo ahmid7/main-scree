@@ -59,7 +59,7 @@ const Hero = () => {
                 </div>
             </header>
             <section className="section-width hero-content">
-                <h2 className='hero-content-text' data-aos="zoom-in-down" data-aos-duration ="2000" data-aos-delay="1000"> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
+                <h2 className='hero-content-text' data-aos="zoom-in-up" data-aos-duration ="2000" data-aos-delay="1000"> Start creating your very <br className="br-hide"/> own customizable <br/> website</h2>
                 <button><a href="#home">create my store</a></button>
             </section>
         </div>

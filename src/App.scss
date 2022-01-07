@@ -34,7 +34,36 @@ html{
     justify-content: $justify;
     align-items: center;
 }
-
+@mixin hoverBefore($colors:map-get($secondary-colors,'deepest')){
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($colors, 5%);
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+@mixin hoverAfter(){
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:map-get($secondary-colors,"deepest");
+    border-radius: 20px;
+    z-index: -2;
+}
+@mixin buttonAttrHover(){
+    display: inline-block;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
 .App{
     background: map-get($primary-colors, "deepest");
     overflow-x: hidden;
@@ -48,6 +77,7 @@ html{
     color:map-get($text-colors, "light");
 }
 .hero-bg{
+    background-image: url(background-img/Background.svg);
     background-color: #12163b;
     background-position: center;
     background-size: cover;
@@ -118,21 +148,62 @@ header{
         }
         .login{
             background: #fff;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
             a{
                 padding: 0.5rem 1.5rem;
                 font-size: 0.8rem;
+                display: inline-block;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color:white;
+                    border-radius: 20px;
+                    z-index: -2;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    background-color: darken(white, 15%);
+                    transition: all .3s;
+                    border-radius: 10rem;
+                    z-index: -1;
+                }
+                &:hover {
+                    &:before {
+                      width: 100%;
+                    }
+                }
             }
         }
         .get-started{
-            background:map-get($secondary-colors, "deepest");
-            &:hover{
-                background: map-get($primary-colors,"deep");
-                transition: background 800ms;
+            @include buttonAttrHover();
+            &::before{
+                @include hoverBefore();
+            }
+            &::after{
+                @include hoverAfter();
+            }
+            &:hover {
+                color: #fff;
+                &:before {
+                  width: 100%;
+                }
             }
             a{
                 padding: 0.5rem;
                 font-size: 0.8rem;
-                color:white;
+                color: white;
             }
         }
     }
@@ -150,22 +221,27 @@ header{
     button{
         border-radius: 20px;
         border:none;
-        a{
+        @include buttonAttrHover();
+        a{            
             text-decoration:none;
             text-transform: uppercase;
             color:#fff;
             display: inline-block;
-            padding: 0.7rem 1.5rem;
+            padding: 0.8rem 1.5rem;
             border-radius: 20px;
             font-size: 0.7rem;
-            background:map-get($secondary-colors,"deepest");
             border:1px solid map-get($secondary-colors,"deepest");
-            &:hover{
-                color: map-get($secondary-colors,"deepest");
-                background:map-get($primary-colors,"deepest");;
-                border:1px solid map-get($secondary-colors,"deepest");
-                transition:  color 1000ms;
-                transition:  background 1000ms;
+            &:after {
+                @include hoverAfter();
+            }
+            &:before {
+                @include hoverBefore();
+            }
+            &:hover {
+                color: #fff;
+                &:before {
+                  width: 100%;
+                }
             }
         }
         
@@ -220,17 +296,88 @@ header{
         button{
             border-radius: 20px;
             padding: 0.4rem 1rem;
-            background-color: map-get($primary-colors, "deepest");
             text-transform: uppercase;
+            &:hover{
+                cursor: pointer;
+            }
         }
         .default-color{
             border:2px solid map-get($secondary-colors, "deepest");
             color:map-get($secondary-colors, "deepest");
+            background: map-get($primary-colors, "deepest");
+            display: inline-block;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color:map-get($primary-colors,"deepest");
+                border-radius: 20px;
+                z-index: -2;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: darken(map-get($primary-colors, "deepest"), 5%);
+                transition: all .3s;
+                border-radius: 10rem;
+                z-index: -1;
+            }
+            &:hover {
+                color: #fff;
+                &:before {
+                  width: 100%;
+                }
+            }
         }
         .color{
-            background-color: map-get($secondary-colors, "deepest");
-            border:none;
+            border: 1px solid map-get($secondary-colors, "deepest");
             color:map-get($text-colors , "deepest");
+            background: map-get($secondary-colors, "deepest");
+            display: inline-block;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color:map-get($secondary-colors,"deepest");
+                border-radius: 20px;
+                z-index: -2;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: darken(map-get($secondary-colors, "deepest"), 5%);
+                transition: all .3s;
+                border-radius: 10rem;
+                z-index: -1;
+            }
+            &:hover {
+                color: #fff;
+                &:before {
+                  width: 100%;
+                }
+            }
         }
     }
     .plan-type{
@@ -930,7 +1077,7 @@ footer{
         }
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:768px){ 
     header{
         .hero-icon{
             h1{
@@ -938,10 +1085,10 @@ footer{
             }
         }
         ul{
-            margin-left:2rem;
+            margin-left:1rem;
             li{
                 a{
-                    font-size: 0.5rem;
+                    font-size: 0.55rem;
                 }
             }
         }
@@ -1174,19 +1321,85 @@ footer{
                     border-radius: 20px;
                     border:none;
                     background: #fff;
+                    transition: all .3s;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
                     a{
                         padding: 0.5rem 1.5rem;
                         font-size: 0.6rem;
+                        display: inline-block;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color:white;
+                            border-radius: 20px;
+                            z-index: -2;
+                        }
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0%;
+                            height: 100%;
+                            background-color: darken(white, 25%);
+                            transition: all .3s;
+                            border-radius: 10rem;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            &:before {
+                            width: 100%;
+                            }
+                        }
                     }
                 }
                 .getstarted{
                     border-radius: 20px;
                     border:none;
                     background:map-get($secondary-colors, "deepest");
+                    transition: all .3s;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
                     a{
                         padding: 0.5rem;
                         font-size: 0.6rem;
                         color:white;
+                        display: inline-block;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color:map-get($secondary-colors,"deepest");
+                            border-radius: 20px;
+                            z-index: -2;
+                        }
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 0%;
+                            height: 100%;
+                            background-color: darken(map-get($secondary-colors,"deepest"), 15%);
+                            transition: all .3s;
+                            border-radius: 10rem;
+                            z-index: -1;
+                        }
+                        &:hover {
+                            &:before {
+                            width: 100%;
+                            }
+                        }
                     }
                 }
             }
@@ -1369,21 +1582,46 @@ footer{
                     .link-app-container{
                         @include flex(center);
                         .link-app{
-                            display: block;
+                            display: inline-block;
                             border-radius:25px;
                             border:none;
+                            transition: all .3s;
+                            position: relative;
+                            overflow: hidden;
+                            z-index: 1;
+                            padding: 0.5rem 1.2rem;
                             a{
                                 border-radius:25px;
-                                padding: 0.5rem 1.2rem;
                                 text-decoration:none;
                                 color:white;
-                                display: inline-block;
-                                background: map-get($secondary-colors, "deepest");
                                 font-size: 0.7rem;
-
-                                &:hover{
-                                    background:map-get($primary-colors, "deep");
-                                    transition: background 1000ms;
+                                &:after{
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color:map-get($secondary-colors, "deepest");
+                                    border-radius: 20px;
+                                    z-index: -2;
+                                }
+                                &:before{
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 0%;
+                                    height: 100%;
+                                    background-color: darken(map-get($secondary-colors, "deepest"), 5%);
+                                    transition: all .3s;
+                                    border-radius: 10rem;
+                                    z-index: -1;
+                                }
+                                &:hover {
+                                    &:before {
+                                    width: 100%;
+                                    }
                                 }
                             }
                         }

@@ -39,7 +39,7 @@ const BusinessPlan = () =>{
                         </div>
                     </div>
 
-                    <div className="plan">
+                    <div className="plan" data-aos="fade-up" data-aos-duration="1500">
                         <div className="plan-header">
                             <p>Gold Plan</p>
                             <p>$19.99/Month</p>
