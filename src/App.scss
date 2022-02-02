@@ -388,9 +388,6 @@ header{
             border:2px solid map-get($text-colors, "deep");
             flex-basis: 32%;
             border-radius: 15px;
-            &:hover{
-                border:2px solid green;
-            }
             .plan-header{
                 background: #090C1F;
                 border-radius:15px 15px 0 0;
